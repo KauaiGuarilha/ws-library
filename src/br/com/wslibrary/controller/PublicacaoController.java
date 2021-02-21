@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebParam.Mode;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.ws.WebServiceProvider;
@@ -21,17 +22,16 @@ public class PublicacaoController {
 	
 	@WebMethod(operationName = "RetornarPublicacoes")
 	@WebResult(name = "publicacoes")
-	public ListaPublicacoes getPublicacoes(){
-		
+	public ListaPublicacoes retornaPublicacoes(){		
 		System.out.println("Retornar Publicações");
+		
 		List<Publicacao> lista = publicacaoDao.todosItens();
 		return new ListaPublicacoes(lista);		
 	}
 	
 	@WebMethod(operationName = "RetornarPublicacao")
 	@WebResult(name = "publicacao")
-	public ListaPublicacoes getPublicacao(@WebParam(name = "filtros") Filtros filtros){
-		
+	public ListaPublicacoes retornaPublicacao(@WebParam(name = "filtros") Filtros filtros){		
 		System.out.println("Retornar Publicação");
 
 		List<Filtro> listaFiltros = filtros.getLista();
