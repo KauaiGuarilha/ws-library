@@ -1,6 +1,8 @@
 package br.com.wslibrary.model.entity;
 
 
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -11,19 +13,20 @@ public class Publicacao {
 	private int paginaInicial;
 	private int paginaFinal;
 	private int anoPublicacao;
-	//private List<Autor> autores;
+	private List<Autor> autor;
 	
 	Publicacao() {
 		super();
 	}
 
-	public Publicacao(int id, String titulo, int paginaInicial, int paginaFinal, int anoPublicacao) {
+	public Publicacao(int id, String titulo, int paginaInicial, int paginaFinal, int anoPublicacao, List<Autor> autor) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.paginaInicial = paginaInicial;
 		this.paginaFinal = paginaFinal;
 		this.anoPublicacao = anoPublicacao;
+		this.autor = autor;
 	}	
 	
 	public int getId() {
@@ -64,24 +67,21 @@ public class Publicacao {
 
 	public void setAnoPublicacao(int anoPublicacao) {
 		this.anoPublicacao = anoPublicacao;
+	}	
+
+	public List<Autor> getAutor() {
+		return autor;
+	}
+
+	public void setAutor(List<Autor> autor) {
+		this.autor = autor;
 	}
 
 	@Override
 	public String toString() {
 		return "Publicacao [id=" + id + ", titulo=" + titulo + ", paginaInicial=" + paginaInicial + ", paginaFinal="
-				+ paginaFinal + ", anoPublicacao=" + anoPublicacao + "]";
-	}	
-
-	/*@Override
-	public int hashCode() {
-		return this.codigo.hashCode();
+				+ paginaFinal + ", anoPublicacao=" + anoPublicacao + ", autor=" + autor + "]";
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		Publicacao item = (Publicacao)obj;
-		return this.codigo.equals(item.codigo);
-	}*/	
 	
 	
 }

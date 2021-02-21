@@ -6,9 +6,11 @@ public class IndexController {
 
 	public static void main(String[] args) {
 
-		PublicacaoController service = new PublicacaoController();				
+		PublicacaoController publicacaoController = new PublicacaoController();				
 		String url = "http://localhost:8080/ws-library";
 		
-		Endpoint.publish(url, service);
+		System.out.println("Servidor rodando "+ url + "?wsdl");
+		
+		Endpoint.publish(url, publicacaoController);
 	}
 }

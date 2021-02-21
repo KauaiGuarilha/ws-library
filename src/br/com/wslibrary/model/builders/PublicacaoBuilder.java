@@ -1,7 +1,10 @@
 package br.com.wslibrary.model.builders;
 
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
+import br.com.wslibrary.model.entity.Autor;
 import br.com.wslibrary.model.entity.Publicacao;
 
 @XmlRootElement
@@ -14,7 +17,7 @@ public class PublicacaoBuilder {
 		private int paginaInicial;
 		private int paginaFinal;
 		private int anoPublicacao;
-		//private List<Autor> autores;
+		private List<Autor> autor;
 		
 		public Builder addId(int id) {
 			this.id = id;
@@ -41,13 +44,13 @@ public class PublicacaoBuilder {
 			return this;
 		}
 		
-		/*public Builder addAutor(List<Autor> autores) {
-			this.autores = autores;
+		public Builder addAutor(List<Autor> autor) {
+			this.autor = autor;
 			return this;
-		}*/
+		}
 		
 		public Publicacao build() {
-			return new Publicacao(this.id, this.titulo, this.paginaInicial, this.paginaFinal, this.anoPublicacao);
+			return new Publicacao(this.id, this.titulo, this.paginaInicial, this.paginaFinal, this.anoPublicacao, this.autor);
 		}
 	}
 }
