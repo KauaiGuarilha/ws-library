@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import br.com.wslibrary.model.entity.Autor;
 import br.com.wslibrary.model.entity.Publicacao;
 
-@XmlRootElement
+
 public class PublicacaoBuilder {
 	
 	public static class Builder {

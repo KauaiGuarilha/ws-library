@@ -1,10 +1,10 @@
-package br.com.wslibrary.utils;
+package br.com.wslibrary.model.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.wslibrary.exception.PublicacaoValidadorException;
 import br.com.wslibrary.model.entity.Publicacao;
+import br.com.wslibrary.model.execption.PublicacaoValidadorException;
 
 public class PublicacaoValidador {
 

@@ -1,4 +1,4 @@
-package br.com.wslibrary.utils;
+package br.com.wslibrary.model.utils;
 
 import java.util.List;
 

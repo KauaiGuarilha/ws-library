@@ -11,9 +11,9 @@ import javax.xml.ws.WebServiceProvider;
 
 import br.com.wslibrary.model.dao.PublicacaoDAO;
 import br.com.wslibrary.model.entity.Publicacao;
-import br.com.wslibrary.utils.Filtro;
-import br.com.wslibrary.utils.Filtros;
-import br.com.wslibrary.utils.ListaPublicacoes;
+import br.com.wslibrary.model.utils.Filtro;
+import br.com.wslibrary.model.utils.Filtros;
+import br.com.wslibrary.model.utils.ListaPublicacoes;
 
 @WebService
 public class PublicacaoController {

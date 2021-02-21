@@ -10,7 +10,7 @@ import br.com.wslibrary.model.builders.AutorBuilder;
 import br.com.wslibrary.model.builders.PublicacaoBuilder;
 import br.com.wslibrary.model.entity.Autor;
 import br.com.wslibrary.model.entity.Publicacao;
-import br.com.wslibrary.utils.Filtro;
+import br.com.wslibrary.model.utils.Filtro;
 
 public class PublicacaoDAO {
 

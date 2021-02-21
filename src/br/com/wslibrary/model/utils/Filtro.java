@@ -1,4 +1,4 @@
-package br.com.wslibrary.utils;
+package br.com.wslibrary.model.utils;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

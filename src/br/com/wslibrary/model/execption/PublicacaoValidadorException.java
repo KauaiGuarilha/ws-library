@@ -1,4 +1,4 @@
-package br.com.wslibrary.exception;
+package br.com.wslibrary.model.execption;
 
 import java.util.List;
 
